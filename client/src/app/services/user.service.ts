@@ -19,7 +19,7 @@ export class UserService {
   }
 
   editUser(user: User): Observable<UserResponse> {
-    return this.http.put<UserResponse>(`${userAPIurl}/${user.id}`, user);
+    return this.http.put<UserResponse>(userAPIurl, user);
   }
 
   deleteUser(id: number): Observable<UserResponse['message']> {
