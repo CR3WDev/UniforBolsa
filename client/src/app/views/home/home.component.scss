@@ -1,0 +1,12 @@
+.container {
+  padding: 50px 80px;
+  min-height: calc(100vh - 224px);
+}
+table {
+  width: 100%;
+}
+@media screen and (max-width: 500px) {
+  .container {
+    padding: 80px 10px;
+  }
+}
