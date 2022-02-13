@@ -23,11 +23,11 @@ class UserController {
     const { username, age, cep, street, number } = req.body;
     const user = await prisma.user.create({
       data: {
-        username: username,
-        age: age,
-        cep: cep,
-        street: street,
-        number: number,
+        username,
+        age,
+        cep,
+        street,
+        number,
       },
     });
     res.json({ data: user });
@@ -36,17 +36,16 @@ class UserController {
     const { id, username, age, cep, street, number } = req.body;
     const updatedUser = await prisma.user.update({
       where: {
-        id: id,
+        id,
       },
       data: {
-        username: username,
-        age: age,
-        cep: cep,
-        street: street,
-        number: number,
+        username,
+        age,
+        cep,
+        street,
+        number,
       },
     });
-
     res.json({ data: updatedUser });
   }
   async delete(req: Request, res: Response) {
